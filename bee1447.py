@@ -41,7 +41,7 @@ def calcularCusto(pessoas: int, vagas: int, g: Grafo, inicio: str, fim: str) -> 
                 u, v = caminho[i], caminho[i - 1]
                 custo += viajantes * g.lista_adjacencia[u][v]
                 g.removerAresta(u, v)
-                #g.removerAresta(v, u)
+                g.removerAresta(v, u)
         pessoas -= viajantes
 
     return str(custo)
